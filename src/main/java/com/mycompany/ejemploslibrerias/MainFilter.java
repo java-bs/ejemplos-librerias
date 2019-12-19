@@ -2,9 +2,11 @@ package com.mycompany.ejemploslibrerias;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
-public class MainMap {
+public class MainFilter {
 
     public static void main(String[] args) {
 
@@ -15,7 +17,7 @@ public class MainMap {
         
         List<Persona> personas = Arrays.asList(luis, pedro, marisa, axel);
 
-//        personas.stream().map(persona -> persona.getNombre() + "...")
+//        personas.stream().filter(persona -> persona.getEdad() > 18)
 //                .forEach(persona -> System.out.println(persona));
     }
 
