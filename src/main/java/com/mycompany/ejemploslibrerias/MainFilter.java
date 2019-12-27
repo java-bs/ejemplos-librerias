@@ -2,9 +2,7 @@ package com.mycompany.ejemploslibrerias;
 
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class MainFilter {
 
@@ -15,9 +13,11 @@ public class MainFilter {
         Persona marisa = new Persona("Marisa", 54, LocalDate.of(2019, 05, 01));
         Persona axel = new Persona("Axel", 2, LocalDate.of(2019, 05, 22));
         
-        List<Persona> personas = Arrays.asList(luis, pedro, marisa, axel);
+        Persona[] personas = {luis, pedro, marisa, axel};
+        
+        List<Persona> listaPersonas = Arrays.asList(personas);
 
-//        personas.stream().filter(persona -> persona.getEdad() > 18)
+        listaPersonas.stream().filter(persona -> persona.getEdad() > 18);
 //                .forEach(persona -> System.out.println(persona));
     }
 
