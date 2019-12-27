@@ -17,8 +17,11 @@ public class MainFilter {
         
         List<Persona> listaPersonas = Arrays.asList(personas);
 
-        listaPersonas.stream().filter(persona -> persona.getEdad() > 18);
-//                .forEach(persona -> System.out.println(persona));
+        listaPersonas
+                .stream()
+                .filter(per -> per.getEdad() > 18)
+                .map(per -> per.getEdad())
+                .forEach(edad -> System.out.println(edad));
     }
 
 }
