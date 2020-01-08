@@ -2,6 +2,7 @@ package com.mycompany.ejemploslibrerias;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -31,6 +32,7 @@ public class MainMap {
         System.out.println(pedidoObtenido);
 
         Set<String> claves = direccionesPedidos.keySet();
+        Collection<Pedido> valores = direccionesPedidos.values();
 
         for (String clave : claves) {
             System.out.println(clave);
